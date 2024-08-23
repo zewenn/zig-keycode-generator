@@ -12,3 +12,4 @@ document.save()
 ```
 > [!TIP]
 > This will save the `my_enum_name.zig` file to [`out`](./out/).
+> See an example of the config file in [`IOKit_OsX.py`](./IOKit_OsX.py)
