@@ -8,6 +8,10 @@ void = type[None]
 
 DATASET: DSET | None = None
 
+MENUM = 0
+MSTRUCT = 1
+MLIST = 2
+
 
 def use_dataset(dataset: DSET) -> void:
     global DATASET
@@ -24,8 +28,8 @@ def replace_keyword_keycode(template: resources.Template, kword: str, kcode: int
     return template.template.replace(f"${fkw},", f"{kcode},")
 
 
-def generate(name: str) -> resources.Template:
-    template: resources.Template = resources.get_template(name)
+def generate(name: str, use: Literal[0, 1, 2]) -> resources.Template:
+    template: resources.Template = resources.get_template(name, use)
     kwords_remaining = copy.deepcopy(resources.KEYWORDS)
 
 

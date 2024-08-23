@@ -9,7 +9,7 @@ import generator
 
 generator.use_dataset({ ... })
 
-document = generator.generate("my_enum_name")
+document = generator.generate("my_enum_name", generator.MENUM)
 document.save()
 ```
 > [!TIP]
