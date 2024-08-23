@@ -33,8 +33,8 @@ def generate(name: str) -> resources.Template:
         keywords = kword if isinstance(kword, list) else [kword]
 
         for keyword in keywords:
-            if (keyword not in kwords_remaining):
-                continue
+            # if (keyword not in kwords_remaining):
+            #     continue
             
             print(f"Replacing [${keyword}] with [{kcode}]")
             template.template = replace_keyword_keycode(
