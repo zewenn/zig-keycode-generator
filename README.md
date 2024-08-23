@@ -10,5 +10,5 @@ generator.use_dataset({ ... })
 document = generator.generate("my_enum_name")
 document.save()
 ```
-> [!INFO]
+> [!TIP]
 > This will save the `my_enum_name.zig` file to [`out`](./out/).
